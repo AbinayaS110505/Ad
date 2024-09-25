@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height:auto ;
+    width: 100vw;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('coco1.jpeg'); 
+    
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+}
+
+.sec1 {
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8vh;
+    border-left: 10%;
+    background: linear-gradient(to right, #33f333, #04a511); 
+    position: relative;
+}
+
+.sec1 img {
+    position: absolute;
+    left: 49px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Set the height equal to the width for a perfect circle */
+    border-radius: 100%; /* Makes the image rounded */
+    object-fit: cover; /* Ensures the image covers the space within the circle */
+}
+
+.sec1 h1 {
+    margin-left: 60px; /* Adjust to give space for the logo */
+    color: #ffffff;
+}
+
+.sec2, .sec3 {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.sec2 h2 {
+    text-align: center;
+    margin-left: 20px;
+    color: #02790c;
+}
+
+.sec3 ul {
+    list-style-type: none;
+    text-align: left;
+    color: #033503;
+}
+
+.sec3 li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+/* From Uiverse.io by MuhammadHasann */ 
+.container-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bt-1 bt-2 bt-3"
+      "bt-4 bt-5 bt-6";
+    position: relative;
+    perspective: 800;
+    padding: 0;
+    width: 135px;
+    height: 48px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-button:active {
+    transform: scale(0.95);
+  }
+  
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  
+  .bt-1 {
+    grid-area: bt-1;
+  }
+  
+  .bt-2 {
+    grid-area: bt-2;
+  }
+  
+  .bt-3 {
+    grid-area: bt-3;
+  }
+  
+  .bt-4 {
+    grid-area: bt-4;
+  }
+  
+  .bt-5 {
+    grid-area: bt-5;
+  }
+  
+  .bt-6 {
+    grid-area: bt-6;
+  }
+  
+  .bt-1:hover ~ button {
+    transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-1:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-3:hover ~ button {
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-3:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-4:hover ~ button {
+    transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-4:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-6:hover ~ button {
+    transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px 2px #18181888;
+  }
+  
+  .bt-6:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px 2px #18181888;
+  }
+  
+  .hover:hover ~ button::before {
+    background: transparent;
+  }
+  
+  .hover:hover ~ button::after {
+    content: "shop now";
+    top: -150%;
+    transform: translate(-50%, 0);
+    font-size: 34px;
+    color: #0bf33d;
+  }
+  
+  button {
+    position: absolute;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    border: 3px solid #0afd2a;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button::before {
+    content: "Try this";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: #048a2c;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 47px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes shake {
+    0% {
+      left: 45%;
+    }
+  
+    25% {
+      left: 54%;
+    }
+  
+    50% {
+      left: 48%;
+    }
+  
+    75% {
+      left: 52%;
+    }
+  
+    100% {
+      left: 50%;
+    }
+  } 
